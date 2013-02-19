@@ -4,6 +4,7 @@
 
 <head>
   <style>
+
     body {
 	    height: 1080px;
 	    width: 1920px;
@@ -12,45 +13,36 @@
     .speech_bubble {
 	    position: relative;
 	    height: 80px;
-	    width: 200px;
+	    width: 200px; /*this needs to be as long as the content put in by vidpresso*/
 	    background: silver; 
 	    margin-top: 880px;
+	    margin-left: 100px;
 	    border-radius: 20px;
 	    text-align: center;
 	    border: solid black 5px;
-
-
 	    }
-   .speech_bubble:before {
-	   position: absolute;
-	   width: 10;
-	   height: 10;
-	   left: 30px;
-	   border: inherit;
-	   }
-   .pointer {
-	   height: 20px;
-	   width: 20px;
-	   background: silver;
-	   border: solid black 5px;
-	   border-color: black transparent transparent black;
-	   margin-top: -8px;
-	   margin-left: -8px;
-	   }
-   .pointer2 {
-	  height: 50px;
-	  width: 150px;
-	  background: black;
-	  margin: 50px;
-	  border: solid 10px;
-	  border-color: white transparent white white;
-	  } 
-  p.pointer2:after {
-	   height: 150px;
-	   width: 300px;
-	   background: silver;
-	   border: solid black 10px;
-	   }
+
+     .speech_bubble:before {
+	     content: "";
+	     position: absolute;
+	     height: 20px;
+	     width: 30px;
+	     border: solid;
+	     border-width: 0 20px 0 0;
+	     /*border-width: 15px 2px 2px 2px;*/
+	     border-color: transparent black transparent transparent;
+	     /*border-color: black transparent transparent transparent;*/
+	     margin-left: -45px;
+	     margin-top: 20px;
+	     }
+    .box {
+	    height: 100px;
+	    width: 100px;
+	    border: solid;
+	    border-width: 30px;
+	    border-color: green;
+	    margin 1000px;
+	  }
 
   </style>
 
@@ -59,10 +51,9 @@
 
 <body>
   <div class="speech_bubble">
-    <div class="pointer"></div>
     <p>Hello world</p>
   </div>
-  <div class="pointer2"><p>Hello World</p></div>
+  <div class="box"></div> 
 </body>
 
 
