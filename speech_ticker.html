@@ -1,26 +1,42 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
   <style>
-
     body {
 	    height: 1080px;
 	    width: 1920px;
 	    background: #dddddd;
 	    }
+    .invisible_area {
+	    height: 400px;
+	    width: 100%;
+	    margin-top: 500px;
+	    }
+
+    .invisible_box {
+	    height: 80px;
+	    display: inline-block;
+	    }
+
     .speech_bubble {
 	    position: relative;
 	    height: 80px;
 	    width: 200px; /*this needs to be as long as the content put in by vidpresso*/
 	    background: silver; 
-	    margin-top: 880px;
-	    margin-left: 100px;
 	    border-radius: 20px;
 	    text-align: center;
 	    border: solid black 5px;
+	    float: right;
+	    margin-left: 50px;
 	    }
+     .picture {
+	     height: 80px;
+	     width: 80px;
+	     background: green;
+	     border-radius: 15px;
+	     border: solid black 5px;
+	     float: left;
+	     }
 
      .speech_bubble:before {
 	     content: "";
@@ -33,28 +49,14 @@
 	     margin-left: -65px;
 	     margin-top: 20px;
 	     }
-    /*The following box looks like an arrow pointing left in the browser. I just can't apply these properties to the above speech_bubble pseudo class*/
-    .box {
-	    height: 0px;
-	    width: 0px;
-	    border: solid;
-	    border-width: 30px;
-	    border-color: transparent;
-	    border-right-color: yellow;
-	    margin 1000px;
-	  }
-
   </style>
-
 </head>
-
-
 <body>
-  <div class="speech_bubble">
-    <p>Hello world</p>
+  <div class="invisible_area">
+    <div class="invisible_box">
+      <div class="speech_bubble">Hello World</div>
+      <div class="picture"></div>
+    </div>
   </div>
-  <div class="box"></div> 
 </body>
-
-
 </html>
