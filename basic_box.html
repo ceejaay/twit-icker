@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style>
+    .box {
+    	background-color: silver;
+	height: 100px;
+	position: relative;
+	width: 100px;
+	border: solid 4px black;
+	border-radius: 15px;
+	margin: 50px;
+    }
+    .box:after {
+    	content: ' ';
+	height: 0;
+	position: absolute;
+	width: 0;
+	border: 10px solid transparent;
+	border-right-color: black;
+	right: 100%;
+	top: 10px;
+    }
+    
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div class="box"></div>
+</body>
+
+
+</html>

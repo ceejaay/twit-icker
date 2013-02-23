@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
   <style>
-
     body {
 	    height: 1080px;
 	    width: 1920px;
 	    background: #dddddd;
 	    }
+    .invisible_area {
+	    height: 400px;
+	    width: 100%;
+	    margin-top: 500px;
+	    }
+
+    .invisible_box {
+	    height: 80px;
+	    display: inline-block;
+	    }
+
     .speech_bubble {
 	    position: relative;
 	    height: 80px;
-	    width: 200px; /*this needs to be as long as the content put in by vidpresso*/
+	   /* width: 200px; /*this needs to be as long as the content put in by vidpresso*/
 	    background: silver; 
-	    margin-top: 880px;
-	    margin-left: 100px;
 	    border-radius: 20px;
 	    text-align: center;
 	    border: solid black 5px;
+<<<<<<< HEAD
 	    
+=======
+	    float: right;
+	    margin-left: 50px;
+>>>>>>> basic_css_approach
 	    }
+     .picture {
+	     height: 80px;
+	     width: 80px;
+	     background: green;
+	     border-radius: 15px;
+	     border: solid black 5px;
+	     float: left;
+	     }
 
+<<<<<<< HEAD
      .speech_bubble:before {
 	     content: "";
 	     background: yellow;
@@ -47,18 +67,36 @@
 	    border-color: green;
 	    margin 1000px;
 	  }
+=======
+     .speech_bubble:after {
+	     content: "  ";
+	     position: absolute;
+	     height: 0;
+	     border: 20px solid transparent;
+	     border-right-color: black;
+	     right: 100%;
+	     top: 10px;
+	     }
+     .service_box {
+	     
+	     height: 80px;
+	     width: 80px;
+	     background: green;
+	     float: right;
+	     }
+>>>>>>> basic_css_approach
+
 
   </style>
-
 </head>
-
-
 <body>
-  <div class="speech_bubble">
-    <p>Hello world</p>
+  <div class="invisible_area">
+    <div class="invisible_box">
+      <div class="speech_bubble">Hello World this is where we put all the text that comes from 
+        <div class="service_box" >Twitter/FB icon</div>
+      </div>
+      <div class="picture"></div>
+    </div>
   </div>
-  <div class="box"></div> 
 </body>
-
-
 </html>
