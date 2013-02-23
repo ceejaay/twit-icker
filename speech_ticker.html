@@ -21,7 +21,7 @@
     .speech_bubble {
 	    position: relative;
 	    height: 80px;
-	    width: 200px; /*this needs to be as long as the content put in by vidpresso*/
+	   /* width: 200px; /*this needs to be as long as the content put in by vidpresso*/
 	    background: silver; 
 	    border-radius: 20px;
 	    text-align: center;
@@ -38,23 +38,32 @@
 	     float: left;
 	     }
 
-     .speech_bubble:before {
-	     content: " hello ";
-	     height: 5px;
-	     width: 5px;
-	     border: solid;
-	     border-width: 50px;
+     .speech_bubble:after {
+	     content: "  ";
+	     position: absolute;
+	     height: 0;
+	     border: 20px solid transparent;
 	     border-right-color: black;
-	     border-color: transparent;
-	     margin-left: -95px;
-	     margin-top: 0px;
+	     right: 100%;
+	     top: 10px;
 	     }
+     .service_box {
+	     
+	     height: 80px;
+	     width: 80px;
+	     background: green;
+	     float: right;
+	     }
+
+
   </style>
 </head>
 <body>
   <div class="invisible_area">
     <div class="invisible_box">
-      <div class="speech_bubble">Hello World</div>
+      <div class="speech_bubble">Hello World this is where we put all the text that comes from 
+        <div class="service_box" >Twitter/FB icon</div>
+      </div>
       <div class="picture"></div>
     </div>
   </div>
